@@ -1,0 +1,13 @@
+<h1>{{ title }}</h1>
+<div class="row">
+  <div class="col-xs-12">
+    <app-game-control (intervalCalled)="onIntervalCalled($event)"></app-game-control>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <app-odd *ngFor="let odds of oddNumbers" [number]="odds"></app-odd>
+    <app-even *ngFor="let evens of evenNumbers" [number]="evens"></app-even>
+  </div>
+</div>
+
